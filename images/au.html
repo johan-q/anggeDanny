@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About</title>
+  <style>
+    /* CSS for container */
+    .container {
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+      height: 300px;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: #888888 #f2f2f2;
+      color: green; /* Set the text color to green */
+    }
+
+    /* CSS for scroll button */
+    .scroll-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      display: none; /* Hide the button by default */
+    }
+
+    /* CSS for About Us heading */
+    h2 {
+      color: red; /* Set the heading color to red */
+      text-align: center;
+    }
+
+    /* CSS for the underline in the About Us heading */
+    h2 u {
+      text-decoration: none; /* Remove default underline style */
+      border-bottom: 1px solid black; /* Set the underline color to black */
+    }
+
+    body {
+      background-image: url("bg2.png"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2><u>About Us</u></h2>
+    <p>Welcome to our musical instruments store! We are passionate about providing high-quality instruments to musicians of all levels. Whether you're a beginner or a professional, we have a wide range of instruments to suit your needs.</p>
+    <p>At our store, you'll find a variety of guitars, keyboards, drums, and more. We source our instruments from trusted manufacturers to ensure excellent sound quality and durability.</p>
+    <p>Our team of knowledgeable staff is always ready to assist you in finding the perfect instrument. We believe that music brings people together and enhances our lives, and we want to help you experience the joy of playing music.</p>
+    <p>Shop with us today and start your musical journey!</p>
+    <p>To help customers make informed decisions, we provide a platform for users to leave reviews and ratings for the products they have purchased or used. These reviews offer insights into the quality, performance, and user experience of the instruments, assisting potential buyers in their decision-making process.</p>
+    <p>We offer different kinds of instruments here that you can enjoy...</p>
+    <p>What are you waiting for? SHOP NOW!</p>
+  </div>
+
+  <button class="scroll-button" onclick="scrollToTop()" id="scrollBtn">&#8593;</button>
+
+  <script>
+    // JavaScript function for scrolling to the top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // JavaScript function to show/hide scroll button based on scroll position
+    window.onscroll = function() {
+      showHideScrollButton();
+    };
+
+    function showHideScrollButton() {
+      var scrollButton = document.getElementById("scrollBtn");
+      if (window.pageYOffset > 20) {
+        scrollButton.style.display = "block";
+      } else {
+        scrollButton.style.display = "none";
+      }
+    }
+  </script>
+</body>
+
+</html>
